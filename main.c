@@ -6,7 +6,7 @@
 /*   By: zimbo <zimbo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 04:25:06 by zimbo             #+#    #+#             */
-/*   Updated: 2025/11/22 06:42:37 by zimbo            ###   ########.fr       */
+/*   Updated: 2025/11/22 06:53:00 by zimbo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ int main(int argc, char **argv)
 		printf("Soma: %d\n", sum(argc, argv));
 		printf("Subtração: %d\n", subtration(argc, argv));
 		printf("Multiplicação: %d\n", multiplication(argc, argv));
+		printf("Divisão: %.2f\n", division(argc, argv));
 	}
 	return (0);
 }
