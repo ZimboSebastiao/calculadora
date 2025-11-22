@@ -6,7 +6,7 @@
 /*   By: zimbo <zimbo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 04:26:33 by zimbo             #+#    #+#             */
-/*   Updated: 2025/11/22 06:51:43 by zimbo            ###   ########.fr       */
+/*   Updated: 2025/11/22 07:03:04 by zimbo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,6 @@ int		multiplication(int argc, char **argv);
 int		subtration(int argc, char **argv);
 double	division(int argc, char **argv);
 int		sum(int argc, char **argv);
+void	layout(void);
 
 #endif

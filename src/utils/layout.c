@@ -1,28 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   layout.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zimbo <zimbo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/22 04:25:06 by zimbo             #+#    #+#             */
-/*   Updated: 2025/11/22 07:04:37 by zimbo            ###   ########.fr       */
+/*   Created: 2025/11/22 07:02:00 by zimbo             #+#    #+#             */
+/*   Updated: 2025/11/22 07:04:17 by zimbo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "calc.h"
 
-int main(int argc, char **argv)
+void	layout(void)
 {
-	// int options;
-	layout();
-
-	if (argc > 1)
-	{
-		printf("Soma: %d\n", sum(argc, argv));
-		printf("Subtração: %d\n", subtration(argc, argv));
-		printf("Multiplicação: %d\n", multiplication(argc, argv));
-		printf("Divisão: %.2f\n", division(argc, argv));
-	}
-	return (0);
+	printf("**************************************************\n");
+	printf("ESCOLHA UMA DAS SEGUINTES OPÇÕES\n");
+	printf("**************************************************\n");
+	printf("\n");
+	printf("(1) SOMA\n");
+	printf("(2) SUBTRAÇÃO\n");
+	printf("(3) MULTIPLICAÇÃO\n");
+	printf("(4) DIVISÃO\n");
+	printf("\n");
 }
