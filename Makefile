@@ -32,22 +32,32 @@ export LOGO
 
 # Compilador e flags
 CC          := cc
-CFLAGS      := -Wall -Wextra -Werror -Iinclude
+CFLAGS      := -Wall -Wextra -Werror -Iheader
 
 # Diretórios
 SRC_DIR     := src
 OBJ_DIR     := obj
-INC_DIR     := include
+INC_DIR     := header
 
 # Nome do binário
 NAME        := calculadora
 
 # Arquivos fonte do projeto principal
 SRC_FILES   := \
-	main.c \
-	header/calc.h \
-	basic/division.c \
-	intermediary/power.c \
+    basic/sum.c \
+    basic/subtration.c \
+    basic/multiplication.c \
+    basic/division.c \
+    intermediary/factorial.c \
+    intermediary/fibonacci.c \
+    intermediary/mdc.c \
+    intermediary/mmc.c \
+    intermediary/power.c \
+    intermediary/square.c
+
+# Main está na raiz, então tratamos separadamente
+MAIN_SRC    := main.c
+MAIN_OBJ    := $(OBJ_DIR)/main.o
 
 SRCS        := $(addprefix $(SRC_DIR)/, $(SRC_FILES))
 OBJS        := $(SRCS:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
@@ -60,15 +70,21 @@ RESET   := \033[0m
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
+$(NAME): $(OBJS) $(MAIN_OBJ)
 	@echo "$$LOGO"
 	@echo "$(BLUE)🔧 Linking $(NAME)...$(RESET)"
-	@$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+	@$(CC) $(CFLAGS) $(OBJS) $(MAIN_OBJ) -o $(NAME)
 	@echo "$(GREEN)✅ Build complete: $(NAME)$(RESET)"
 
-# Compilação dos .o
+# Compilação dos .o dos arquivos em src/
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c | $(OBJ_DIR)
 	@mkdir -p $(dir $@)
+	@$(CC) $(CFLAGS) -c $< -o $@
+	@echo "$(YELLOW)Compiled:$(RESET) $<"
+
+# Compilação do main.c (que está na raiz)
+$(OBJ_DIR)/main.o: main.c | $(OBJ_DIR)
+	@mkdir -p $(OBJ_DIR)
 	@$(CC) $(CFLAGS) -c $< -o $@
 	@echo "$(YELLOW)Compiled:$(RESET) $<"
 
@@ -86,37 +102,19 @@ fclean: clean
 
 re: fclean all
 
-## Exemplo simples de execução
-test: $(NAME)
-	@echo "$(BLUE)🚀 Testando calculadora...$(RESET)"
-	@./$(NAME) 2 1 3 5 8
-	@echo
-	@echo "$(BLUE)🚫 Testando entrada inválida...$(RESET)"
-	@./$(NAME) 0 one 2 3 || true
-
-check: $(NAME)
-	@echo "$(BLUE)🧠 Rodando testes automatizados...$(RESET)"
-	@chmod +x test/calculadora_tests.sh
-	@./test/calculadora_tests.sh
-
-# Verificação de leaks
 valgrind: $(NAME)
 	@valgrind --leak-check=full ./$(NAME) 3 2 1
 
-# Norminette
 norm:
 	@echo "$(BLUE)📜 Checking Norminette...$(RESET)"
 	@norminette $(SRC_DIR) $(INC_DIR)
 
-# Ajuda
 help:
 	@echo "$(YELLOW)Available targets:$(RESET)"
 	@echo "  all       – Compila o projeto principal ($(NAME))"
 	@echo "  clean     – Remove arquivos objeto"
 	@echo "  fclean    – Remove objetos e executáveis"
 	@echo "  re        – Reconstrói tudo"
-	@echo "  test      – Executa teste básico (com exemplo do PDF)"
-	@echo "  check     – Testa com checker_OS (mostra número de operações e OK/KO)"
 	@echo "  valgrind  – Verifica vazamentos de memória"
 	@echo "  norm      – Executa Norminette"
 	@echo "  help      – Mostra este menu"

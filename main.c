@@ -6,15 +6,18 @@
 /*   By: zimbo <zimbo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 04:25:06 by zimbo             #+#    #+#             */
-/*   Updated: 2025/11/22 04:42:14 by zimbo            ###   ########.fr       */
+/*   Updated: 2025/11/22 05:54:52 by zimbo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cal.h"
+#include "calc.h"
 
 int main(int argc, char **argv)
 {
 
-	
+	if (argc > 1)
+	{
+		printf("%d",sum (argc, argv));
+	}
 	return (0);
 }
