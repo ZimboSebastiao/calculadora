@@ -6,7 +6,7 @@
 /*   By: zimbo <zimbo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 04:26:33 by zimbo             #+#    #+#             */
-/*   Updated: 2025/11/22 07:03:04 by zimbo            ###   ########.fr       */
+/*   Updated: 2025/11/22 07:24:39 by zimbo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <unistd.h>
 # include <stdio.h>
 
+int		options(int op, int argc, char **argv);
 int		multiplication(int argc, char **argv);
 int		subtration(int argc, char **argv);
 double	division(int argc, char **argv);

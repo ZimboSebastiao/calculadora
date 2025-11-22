@@ -30,6 +30,7 @@ NAME        := calculadora
 # Arquivos fonte do projeto principal
 SRC_FILES   := \
 	layout/layout.c \
+	utils/options.c \
     basic/sum.c \
     basic/subtration.c \
     basic/multiplication.c \
@@ -41,7 +42,6 @@ SRC_FILES   := \
     intermediary/power.c \
     intermediary/square.c
 
-# Main está na raiz, então tratamos separadamente
 MAIN_SRC    := main.c
 MAIN_OBJ    := $(OBJ_DIR)/main.o
 
