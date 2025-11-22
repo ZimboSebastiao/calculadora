@@ -29,7 +29,7 @@ NAME        := calculadora
 
 # Arquivos fonte do projeto principal
 SRC_FILES   := \
-	utils/layout.c \
+	layout/layout.c \
     basic/sum.c \
     basic/subtration.c \
     basic/multiplication.c \
