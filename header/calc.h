@@ -6,7 +6,7 @@
 /*   By: zimbo <zimbo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 04:26:33 by zimbo             #+#    #+#             */
-/*   Updated: 2025/11/23 05:48:26 by zimbo            ###   ########.fr       */
+/*   Updated: 2025/11/23 06:34:58 by zimbo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ int		subtration(int argc, char **argv);
 int		factorial(int argc, char **argv);
 double	division(int argc, char **argv);
 int		sum(int argc, char **argv);
+int		fibonacci(int number);
 void	layout(void);
 
 #endif

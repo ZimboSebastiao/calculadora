@@ -6,7 +6,7 @@
 /*   By: zimbo <zimbo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 07:07:54 by zimbo             #+#    #+#             */
-/*   Updated: 2025/11/22 07:27:02 by zimbo            ###   ########.fr       */
+/*   Updated: 2025/11/23 06:37:59 by zimbo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,9 @@
 int	options(int op, int argc, char **argv)
 {
 	int	result;
+	int	number;
 
+	number = atoi(argv[1]);
 	result = 0;
 	switch (op)
 	{
@@ -30,6 +32,12 @@ int	options(int op, int argc, char **argv)
 			break;
 		case 4:
 			result = printf("Divisão: %.2f\n", division(argc, argv));
+			break;
+		case 5:
+			result = printf("Fatorial: %d\n", factorial(argc, argv));
+			break;
+		case 6:
+			result = printf("Fibonacci: %d\n", fibonacci(number));
 			break;
 		default:
 			printf("Insira uma opção válida!\n");
