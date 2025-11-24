@@ -38,7 +38,6 @@ SRC_FILES   := \
     intermediary/factorial.c \
     intermediary/fibonacci.c \
     intermediary/mdc.c \
-    intermediary/mmc.c \
     intermediary/power.c \
 	intermediary/prime.c \
     intermediary/square.c

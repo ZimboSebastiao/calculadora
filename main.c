@@ -6,7 +6,7 @@
 /*   By: zimbo <zimbo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 04:25:06 by zimbo             #+#    #+#             */
-/*   Updated: 2025/11/24 16:55:01 by zimbo            ###   ########.fr       */
+/*   Updated: 2025/11/24 17:10:08 by zimbo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 int main(int argc, char **argv)
 {
 	int op;
-	layout();
 	if (argc > 1)
 	{
+		layout();
 		scanf("%d", &op);
 		if (op != 0)
 			options(op, argc, argv);
