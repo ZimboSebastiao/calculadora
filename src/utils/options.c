@@ -6,7 +6,7 @@
 /*   By: zimbo <zimbo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 07:07:54 by zimbo             #+#    #+#             */
-/*   Updated: 2025/11/23 06:58:03 by zimbo            ###   ########.fr       */
+/*   Updated: 2025/11/23 07:29:45 by zimbo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,9 @@ int	options(int op, int argc, char **argv)
 			break;
 		case 7:
 			result = printf("Potência: %d\n", power(argc, argv));
+			break;
+		case 8:
+			result = printf("Raiz: %d\n", square(argc, argv));
 			break;
 		default:
 			printf("Insira uma opção válida!\n");

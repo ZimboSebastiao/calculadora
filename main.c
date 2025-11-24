@@ -6,7 +6,7 @@
 /*   By: zimbo <zimbo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 04:25:06 by zimbo             #+#    #+#             */
-/*   Updated: 2025/11/23 06:39:13 by zimbo            ###   ########.fr       */
+/*   Updated: 2025/11/23 07:04:02 by zimbo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int main(int argc, char **argv)
 {
 	int op;
 	layout();
-	// fibonacci(argc, argv);
+
 	if (argc > 1)
 	{
 		scanf("%d", &op);

@@ -6,7 +6,7 @@
 /*   By: zimbo <zimbo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 07:02:00 by zimbo             #+#    #+#             */
-/*   Updated: 2025/11/23 06:57:15 by zimbo            ###   ########.fr       */
+/*   Updated: 2025/11/23 07:05:36 by zimbo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,6 @@ void	layout(void)
 	printf("(5) FATORIAL\n");
 	printf("(6) FIBONACCI\n");
 	printf("(7) POTÊNCIA\n");
+	printf("(8) Raízes\n");
 	printf("\n");
 }
