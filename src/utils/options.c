@@ -6,7 +6,7 @@
 /*   By: zimbo <zimbo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 07:07:54 by zimbo             #+#    #+#             */
-/*   Updated: 2025/11/24 16:46:25 by zimbo            ###   ########.fr       */
+/*   Updated: 2025/11/24 16:53:54 by zimbo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,9 @@ int	options(int op, int argc, char **argv)
 			break;
 		case 9:
 			result = printf("Máximo divisor comum: %d\n", mdc(argc, argv));
+			break;
+		case 10:
+			result = prime(number);
 			break;
 		default:
 			printf("Insira uma opção válida!\n");

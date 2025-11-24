@@ -6,7 +6,7 @@
 /*   By: zimbo <zimbo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/24 16:00:33 by zimbo             #+#    #+#             */
-/*   Updated: 2025/11/24 16:07:31 by zimbo            ###   ########.fr       */
+/*   Updated: 2025/11/24 16:53:07 by zimbo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,14 @@ int	prime(int number)
 		index++;
 	}
 	if (count > 2)
+	{
+		printf("Não é primo\n");
 		return (0);
-	return (1);
+	}
+	else
+	{
+		printf("É primo\n");
+		return (1);
+	}
+
 }
