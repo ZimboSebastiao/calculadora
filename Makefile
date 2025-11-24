@@ -40,6 +40,7 @@ SRC_FILES   := \
     intermediary/mdc.c \
     intermediary/mmc.c \
     intermediary/power.c \
+	intermediary/prime.c \
     intermediary/square.c
 
 MAIN_SRC    := main.c

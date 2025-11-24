@@ -1,27 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   prime.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zimbo <zimbo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/22 04:25:06 by zimbo             #+#    #+#             */
-/*   Updated: 2025/11/24 16:08:33 by zimbo            ###   ########.fr       */
+/*   Created: 2025/11/24 16:00:33 by zimbo             #+#    #+#             */
+/*   Updated: 2025/11/24 16:07:31 by zimbo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "calc.h"
 
-int main(int argc, char **argv)
+int	prime(int number)
 {
-	int op;
-	layout();
-	printf("%d\n",prime(5));
-	if (argc > 1)
+	if (number <= 0)
+		return (-1);
+	int	index;
+	int	count;
+
+	index = 1;
+	count = 0;
+	while (index <= number)
 	{
-		scanf("%d", &op);
-		if (op != 0)
-			options(op, argc, argv);
+		if (number % index == 0)
+			count++;
+		index++;
 	}
-	return (0);
+	if (count > 2)
+		return (0);
+	return (1);
 }

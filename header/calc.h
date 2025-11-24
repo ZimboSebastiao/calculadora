@@ -6,7 +6,7 @@
 /*   By: zimbo <zimbo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 04:26:33 by zimbo             #+#    #+#             */
-/*   Updated: 2025/11/23 07:08:46 by zimbo            ###   ########.fr       */
+/*   Updated: 2025/11/24 16:06:03 by zimbo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ int		square(int argc, char **argv);
 int		power(int argc, char **argv);
 int		sum(int argc, char **argv);
 int		fibonacci(int number);
+int		prime(int number);
 void	layout(void);
 
 #endif
